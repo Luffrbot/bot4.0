@@ -168,14 +168,7 @@ const getLeveling = (userId) => {
             _level.pushb(obj)
             fs.writeFileSync('./database/user/level.json', JSON.stringify(_level))
         }
-        
-                const getLimit = (sender) => {
-                let position = false
-              obejet.keys(limit).forEach (i) => {
-                if (limit[position].id === sender) {
-                   position = i
-                  }
-              })
+
              if (position !== false) {
                 return limit[position].limit
             }
